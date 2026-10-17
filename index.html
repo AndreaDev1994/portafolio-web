@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrea Galeano David | Desarrolladora Web y Móvil Junior</title>
+<style>
+  :root {
+    --bg: #f6f7fb; --card: #fff; --text: #1f2430; --muted: #646b7c;
+    --accent: #6c4cf1; --accent-soft: #ece8ff; --border: #e4e6ef;
+  }
+  [data-theme="dark"] {
+    --bg: #12141c; --card: #1b1e29; --text: #e9ebf3; --muted: #9aa1b5;
+    --accent: #9b85ff; --accent-soft: #2a2545; --border: #2a2e3d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+    transition: background .3s, color .3s;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+  header {
+    background: linear-gradient(135deg, var(--accent), #3ab0ff);
+    color: #fff; border-radius: 20px; padding: 36px 28px; position: relative;
+  }
+  header h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+  header p.role { opacity: .9; margin-top: 4px; font-size: 1.1rem; }
+  .contact { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 18px; font-size: .92rem; }
+  .contact a, .contact span { color: #fff; text-decoration: none; opacity: .95; }
+  .contact a:hover { text-decoration: underline; }
+  #theme {
+    position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,.2);
+    border: 0; color: #fff; width: 40px; height: 40px; border-radius: 50%;
+    font-size: 1.1rem; cursor: pointer;
+  }
+  section { margin-top: 36px; }
+  h2 {
+    font-size: .95rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 14px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 20px 22px;
+  }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .tags span {
+    background: var(--accent-soft); color: var(--accent);
+    padding: 3px 10px; border-radius: 99px; font-size: .82rem; font-weight: 500;
+  }
+  .card h3 { font-size: 1.02rem; }
+  .meta { color: var(--muted); font-size: .85rem; margin-bottom: 8px; }
+  ul { padding-left: 18px; color: var(--muted); font-size: .94rem; }
+  li + li { margin-top: 4px; }
+  .item + .item { margin-top: 16px; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s, transform .6s; }
+  .reveal.show { opacity: 1; transform: none; }
+  @media print { #theme { display: none; } .reveal { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <button id="theme" aria-label="Cambiar tema">🌙</button>
+    <h1>Andrea Galeano David</h1>
+    <p class="role">Desarrolladora Web y Móvil Junior</p>
+    <div class="contact">
+      <span>📍 La Pintada, Antioquia, Colombia</span>
+      <a href="tel:+573216144064">📞 +57 321 614 4064</a>
+      <a href="mailto:ad463330864@gmail.com">✉️ ad463330864@gmail.com</a>
+      <a href="https://github.com/usuario" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://portafolio-web.com" target="_blank" rel="noopener">Portafolio</a>
+    </div>
+  </header>
+
+  <section class="reveal">
+    <h2>Perfil profesional</h2>
+    <div class="card">
+      Técnica laboral en Programación de Aplicaciones TIC con formación práctica en desarrollo web y móvil.
+      Experiencia en interfaces responsivas con HTML5, CSS3, JavaScript y React.js, lógica de programación y
+      automatización con Python, y aplicaciones nativas con Android (Kotlin/Java). Manejo de Git y GitHub,
+      consumo de APIs REST y trabajo bajo metodologías ágiles (Scrum). Busco una posición de Desarrolladora Web
+      o Móvil Junior para aportar soluciones funcionales y de calidad, y crecer en un equipo de desarrollo.
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Habilidades técnicas</h2>
+    <div class="grid" id="skills"></div>
+  </section>
+
+  <section class="reveal">
+    <h2>Proyectos</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Asistente de IA personal</h3>
+        <p class="meta">Aplicación web · HTML5, CSS3, JavaScript, React.js</p>
+        <ul>
+          <li>Asistente con inteligencia artificial e interfaz web responsiva.</li>
+          <li>Componentes reutilizables, manejo de estados con Hooks, integración de API de IA vía REST y control de versiones con Git y GitHub.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Agente de IA en normatividad colombiana</h3>
+        <p class="meta">Python · API de IA</p>
+        <ul>
+          <li>Agente especializado en consultas sobre normatividad colombiana, con respuestas basadas en fuentes legales.</li>
+          <li>Ingeniería de prompts y base documental / RAG para mejorar la precisión.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Asistente de IA para panadería y repostería</h3>
+        <p class="meta">HTML5, CSS3, JavaScript, Python</p>
+        <ul>
+          <li>Apoya a panaderos, reposteros y emprendedores con recetas, porciones, costos y sugerencias.</li>
+          <li>Interfaz sencilla y responsiva con API de IA para generar respuestas.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Videojuego</h3>
+        <p class="meta">JavaScript, Python, Android</p>
+        <ul>
+          <li>Videojuego con lógica de juego, puntuación y control de eventos del usuario.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Experiencia</h2>
+    <div class="card">
+      <h3>Desarrolladora Web · GIROPLAY S.A.S</h3>
+      <p class="meta">Octubre 2026</p>
+      <ul>
+        <li>Apoyo en el desarrollo y mantenimiento de sitios web y aplicaciones.</li>
+        <li>Colaboración con el equipo en pruebas, corrección de errores y documentación, cumpliendo los tiempos de entrega.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Formación académica</h2>
+    <div class="card">
+      <div class="item">
+        <h3>Técnico Laboral en Programación de Aplicaciones TIC</h3>
+        <p class="meta">Uniminuto, La Pintada · 2026 – En curso</p>
+        <ul><li>Lógica de programación, bases de datos, desarrollo web y móvil, y metodologías ágiles.</li></ul>
+      </div>
+      <div class="item">
+        <h3>Bachiller</h3>
+        <p class="meta">Institución Educativa Rafael Uribe Uribe, La Pintada · 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Idiomas</h2>
+    <div class="card"><div class="tags"><span>Español</span></div></div>
+  </section>
+
+</div>
+
+<script>
+  const skills = {
+    "Desarrollo web": ["HTML5","CSS3","JavaScript ES6+","React.js","Diseño responsivo","Bootstrap","APIs REST","JSON"],
+    "Desarrollo móvil": ["Android","Android Studio","Kotlin","Java","XML","Material Design","Firebase"],
+    "Backend y datos": ["Python","Flask","SQL","MySQL","SQLite"],
+    "Herramientas": ["Git","GitHub","VS Code","Postman","Figma","Jira","Scrum"]
+  };
+  document.getElementById("skills").innerHTML = Object.entries(skills).map(([t, l]) =>
+    `<div class="card"><h3>${t}</h3><div class="tags">${l.map(s => `<span>${s}</span>`).join("")}</div></div>`
+  ).join("");
+
+  const root = document.documentElement, btn = document.getElementById("theme");
+  const setTheme = t => { root.dataset.theme = t; btn.textContent = t === "dark" ? "☀️" : "🌙"; };
+  setTheme(matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  btn.onclick = () => setTheme(root.dataset.theme === "dark" ? "light" : "dark");
+
+  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add("show")), { threshold: .1 });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
